@@ -142,8 +142,8 @@ html,body,#root{background:#e83b18}
 .hold-control.is-holding .hold-progress i{transform:scaleX(1);transition:transform .4s linear}
 .hold-control.is-released .hold-progress i{transform:scaleX(1)}
 .activation-hint{position:relative;z-index:2;margin:12px 0 0 17px;color:rgba(255,247,235,.7);font:8px 'DM Mono',monospace;letter-spacing:.12em}
-.wave-mark{transform:translateX(260px)}
-@media(max-width:760px){.activation:before{left:60%;top:43%;width:92vw}.activation-steps{gap:7px;margin-top:26px;font-size:7px}.activation-steps .step{gap:4px}.activation-steps>i{width:14px}.hold-control{margin-top:20px;min-width:224px}.activation-hint{font-size:7px}.wave-mark{transform:translateX(178px) scale(.68)}}
+.wave-mark{right:auto;left:calc(100% - 280px);transform:none}
+@media(max-width:760px){.activation:before{left:60%;top:43%;width:92vw}.activation-steps{gap:7px;margin-top:26px;font-size:7px}.activation-steps .step{gap:4px}.activation-steps>i{width:14px}.hold-control{margin-top:20px;min-width:224px}.activation-hint{font-size:7px}.wave-mark{left:calc(100% - 190px);right:auto;transform:scale(.68)}}
 @media(max-width:760px){.hero{padding-bottom:90px}.hero-copy{align-self:end;margin-top:0}.hero-ghost{left:-5%;top:13%;font-size:70vw}.hero-tech-left{top:16%;font-size:7px}.hero-tech-right{right:38px;top:29%;gap:8px;font-size:6px}.hero-specbar{display:none}.hero:before{left:0;top:11%;width:min(92vw,50vh)}}
 .tap-hand{z-index:0;right:1%;bottom:0;width:min(68vw,980px);height:auto;max-height:88%;max-width:none;object-fit:contain;opacity:.83;filter:saturate(.84) contrast(1.08);mix-blend-mode:screen;mask-image:radial-gradient(ellipse 62% 56% at 57% 52%,#000 46%,transparent 84%)}
 .wear-context{position:absolute;z-index:0;right:-5%;bottom:-6%;width:min(76vw,1120px);height:92%;object-fit:contain;object-position:right bottom;opacity:.86;mix-blend-mode:screen;filter:saturate(.78) contrast(1.08);mask-image:radial-gradient(ellipse 62% 58% at 58% 54%,#000 46%,transparent 85%)}
