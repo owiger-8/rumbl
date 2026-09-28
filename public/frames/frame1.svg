@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400" width="300" height="400">
+    <defs>
+      <radialGradient id="bgRad" cx="50%" cy="50%" r="50%">
+        <stop offset="0%" stop-color="#141010"/>
+        <stop offset="100%" stop-color="#050505"/>
+      </radialGradient>
+    </defs>
+    <rect width="300" height="400" fill="url(#bgRad)"/>
+    <rect width="300" height="400" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+    
+      <defs>
+        <radialGradient id="lamp" cx="50%" cy="30%" r="50%">
+          <stop offset="0%" stop-color="#ff9955" stop-opacity="0.3"/>
+          <stop offset="100%" stop-color="#050505" stop-opacity="0"/>
+        </radialGradient>
+      </defs>
+      <circle cx="150" cy="120" r="140" fill="url(#lamp)"/>
+      <line x1="150" y1="20" x2="150" y2="120" stroke="#333" stroke-width="2"/>
+      <ellipse cx="150" cy="360" rx="90" ry="14" fill="#000" opacity="0.6"/>
+      <!-- Silhouetted walking figure -->
+      <circle cx="150" cy="210" r="14" fill="#151515" stroke="#ff5500" stroke-width="0.8"/>
+      <path d="M140 230 L160 230 L165 310 L155 350 L145 310 Z" fill="#121212"/>
+      <path d="M142 240 L132 290" stroke="#222" stroke-width="4" stroke-linecap="round"/>
+      <path d="M158 240 L168 285" stroke="#ff5500" stroke-width="3" stroke-linecap="round"/>
+      <circle cx="168" cy="285" r="3" fill="#ff5500"/>
+    
+    <!-- Technical HUD overlays -->
+    <text x="16" y="28" fill="#ff5500" font-family="monospace" font-size="11" font-weight="bold" letter-spacing="1">01:42 AM</text>
+    <text x="16" y="380" fill="#777" font-family="monospace" font-size="9" letter-spacing="1">01 // NIGHT</text>
+    <line x1="16" y1="36" x2="60" y2="36" stroke="#ff5500" stroke-width="1"/>
+  </svg>
