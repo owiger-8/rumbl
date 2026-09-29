@@ -33,7 +33,7 @@ export default function WatchExperience({ scrollProgress, isActivated, isHolding
   useFrame((state, frameDelta) => {
     if (!group.current) return;
     const p = scrollProgress;
-    const chapterProgress = p * 6;
+    const chapterProgress = p * 5;
     const time = state.clock.getElapsedTime();
     const delta = Math.min(frameDelta, .05);
     const progressDelta = p - lastProgress.current;
@@ -56,9 +56,7 @@ export default function WatchExperience({ scrollProgress, isActivated, isHolding
     else if (chapterProgress < 2) { x = mobile ? 0 : .08; y = .1; scale = 13; ry = -.65; }
     else if (chapterProgress < 3) { x = mobile ? 0 : .12; y = .08; scale = 16; rx = .68; ry = -.18; rz = .04; }
     else if (chapterProgress < 4) { x = mobile ? 0 : -.18; y = .05; scale = 15; rx = .18; ry = 1.25; rz = -.08; }
-    else if (chapterProgress < 5) { x = 0; y = .05; scale = 16; ry = -.35; }
-    else if (chapterProgress < 6) { x = mobile ? 0 : .05; y = .12; scale = mobile ? 8 : 9; ry = -.65; }
-    else if (chapterProgress < 7) { x = mobile ? 0 : .15; y = .05; scale = 14; ry = -.35; }
+    else if (chapterProgress < 5) { x = mobile ? 0 : .05; y = .12; scale = mobile ? 8 : 9; ry = -.65; }
     else { x = mobile ? 0 : .15; y = .05; scale = 14; ry = -.55; }
 
     const shake = isHolding || isActivated ? Math.sin(time * 42) * .012 : 0;
@@ -79,7 +77,7 @@ export default function WatchExperience({ scrollProgress, isActivated, isHolding
     const pushedScale = scale * (1 + scrollSway * .055 + Math.sin(p * Math.PI * 8) * .012 * scrollSway);
     group.current.scale.setScalar(THREE.MathUtils.lerp(group.current.scale.x || pushedScale, pushedScale, follow));
 
-    const explode = p >= 4 / 6 && p < 5 / 6 ? Math.sin(Math.PI * (p - 4 / 6) / (1 / 6)) : 0;
+    const explode = chapterProgress >= 4 && chapterProgress < 5 ? Math.sin(Math.PI * (chapterProgress - 4)) : 0;
     explodedNames.forEach((name, i) => {
       const mesh = meshRefs.current[name];
       if (!mesh) return;

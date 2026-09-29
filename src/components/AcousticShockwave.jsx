@@ -10,8 +10,8 @@ export default function AcousticShockwave({ active, count = 7 }) {
     if (!groupRef.current) return;
     const distance = Math.max(.1, state.camera.position.z - .2);
     const pixelsToWorld = 2 * distance * Math.tan(THREE.MathUtils.degToRad(18)) / state.size.height;
-    groupRef.current.position.x = -.2 + 130 * pixelsToWorld;
-    groupRef.current.position.y = -.05 - 130 * pixelsToWorld;
+    groupRef.current.position.x = -.2 + 330 * pixelsToWorld;
+    groupRef.current.position.y = -.05 - 30 * pixelsToWorld;
     if (!active) return;
     const time = state.clock.getElapsedTime();
 
